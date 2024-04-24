@@ -84,9 +84,9 @@ possible? The answer is yes. It is possible and these unmapped areas are often
 called "holes". And those files which have holes are often called "sparse
 files".
 
-All reasonable file-systems like Linux ext[234], btrfs, XFS, or Solaris XFS,
-and even Windows' NTFS, support sparse files. Old and less reasonable
-filesystems, like FAT, do not support holes.
+Most file-systems like Linux ext[234], btrfs, XFS, or Solaris XFS,
+and even Windows' NTFS, support sparse files. However, not all
+filesystems support holes, like FAT and ecryptfs.
 
 Reading holes returns zeroes. Writing to a hole causes the filesystem to
 allocate disk sectors for the corresponding blocks. Here is how you can create
